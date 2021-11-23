@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    font-size: 40px;
+    height: 500px;
+}
+
+.introduction {
+    text-align: center;
+}
+
+.social-media {
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;
+    color: #e65100;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    color: #002347;
+}
+
+.wrapper {
+    background-image: url("images/pawel-czerwinski-XWzKALda8kE-unsplash.jpg");
+    background-position: top center;
+    background-size: 100%;
+}
+
+.hobbies {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.item {
+    justify-content: space-around;
+    width: 500px;
+}
+
+/*HAMBURGER MENU*/
+
+.menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    /*border: 3px solid #e65100;*/
+}
+
+.menu-button-burger {
+    width: 50px;
+    height: 6px;
+    background: #e65100;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .5s ease-in-out;
+}
+
+.menu-button-burger::before,
+.menu-button-burger::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: #e65100;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .5s ease-in-out;
+}
+
+.menu-button-burger::before {
+    transform: translateY(-16px);
+}
+
+.menu-button-burger::after {
+    transform: translateY(16px);
+}
+
+/*ANIMATION*/
+.menu-btn.open .menu-button-burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.menu-btn.open .menu-button-burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-button-burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
