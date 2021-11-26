@@ -13,6 +13,8 @@ header {
 
 .introduction {
     text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .social-media {
@@ -51,6 +53,13 @@ p {
 .item {
     justify-content: space-around;
     width: 500px;
+}
+
+.potloodd,
+.boek,
+.schoen {
+    width: 100px;
+    height: 100px;
 }
 
 
