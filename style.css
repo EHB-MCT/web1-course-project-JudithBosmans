@@ -32,13 +32,20 @@ h4 {
 
 p {
     font-family: 'Roboto', sans-serif;
-    color: #002347;
+    color: black;
 }
+
+.wrapper p {
+    color: blanchedalmond;
+}
+
+
 
 .wrapper {
     background-image: url("images/pawel-czerwinski-XWzKALda8kE-unsplash.jpg");
     background-position: top center;
     background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .hobbies {
@@ -46,8 +53,12 @@ p {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
     justify-content: space-around;
+}
+
+.hobbies div {
+    width: 30%;
+    margin-bottom: 30px;
 }
 
 .item {
@@ -59,64 +70,156 @@ p {
 .boek,
 .schoen {
     width: 100px;
-    height: 100px;
+    height: auto;
+    padding-top: 50px;
+}
+
+section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.hobbies {
+    background-image: url(images/pawel-czerwinski-XWzKALda8kE-unsplash.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.hobbies p {
+    color: blanchedalmond;
 }
 
 
 /*HAMBURGER MENU*/
 
-.menu-btn {
+#menuToggle {
+    display: block;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    cursor: pointer;
-    transition: all .5s ease-in-out;
-    /*border: 3px solid #e65100;*/
+    top: 50px;
+    left: 50px;
+    font-family: Bebas;
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
 }
 
-.menu-button-burger {
-    width: 50px;
-    height: 6px;
-    background: #e65100;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
-    transition: all .5s ease-in-out;
+#menuToggle a {
+    text-decoration: none;
+    color: #232323;
+
+    transition: color 0.3s ease;
 }
 
-.menu-button-burger::before,
-.menu-button-burger::after {
-    content: '';
+#menuToggle a:hover {
+    color: tomato;
+}
+
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
     position: absolute;
-    width: 50px;
-    height: 6px;
-    background: #e65100;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
-    transition: all .5s ease-in-out;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
 }
 
-.menu-button-burger::before {
-    transform: translateY(-16px);
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: blanchedalmond;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
 }
 
-.menu-button-burger::after {
-    transform: translateY(16px);
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
 }
 
-/*ANIMATION*/
-.menu-btn.open .menu-button-burger {
-    transform: translateX(-50px);
-    background: transparent;
-    box-shadow: none;
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
 }
 
-.menu-btn.open .menu-button-burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: black;
 }
 
-.menu-btn.open .menu-button-burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+    position: absolute;
+    width: 70px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+
+    background: #ededed;
+    opacity: 50%;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked~ul {
+    transform: none;
 }

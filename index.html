@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Judith Bosmans</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -15,18 +16,40 @@
 
         <div class="wrapper">
 
-            <header>
+            <nav role="navigation">
 
-                <div class="menu-btn">
+                <div id="menuToggle">
 
-                    <div class="menu-button-burger">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
 
-                    </div>
+                    <ul id="menu">
+                        <a href="#About">
+                            <li>About</li>
+                        </a>
+                        <a href="#Hobbies">
+                            <li>Hobbies</li>
+                        </a>
+                        <a href="#Contact">
+                            <li>Contact</li>
+                        </a>
+                        <a href="#">
+                            <li>Contact</li>
+                        </a>
+
+                    </ul>
 
                 </div>
 
+            </nav>
+
+            <header>
+
                 <h1>Judith Bosmans</h1>
                 <p>Portfolio</p>
+
             </header>
 
         </div>
@@ -40,55 +63,58 @@
 
         <section class="introduction">
 
-            <h2>Who am I?</h2>
+            <h2 id="About">Who am I?</h2>
             <p>Born and raised in Belgium. Divorced parents with one half-sister and two steph)sisters. blablabla</p>
 
-            <div class="hobbies">
+        </section>
 
-                <div class="item">
-                    <img src="images/potloodd-icon.png" class="potloodd" alt="potloodd-icon" />
-                    <h2>Drawing</h2>
-                    <p>Have been drawing since i was little. Attended art school for 4 years. Decided I didn't want to
-                        pursue it professionally and kept it as a hobby.</p>
-                </div>
-                <div class=" item">
-                    <img src="images/boek-ai.png" class="boek" alt="boek-ai" />
-                    <h2>Reading</h2>
-                    <p>Have also been reading since I was a kid. It is a nice form of relaxation and break from the
-                        digital world.</p>
-                </div>
-                <div class="item">
-                    <img src="images/schoen-icon.png" class="schoen" alt="schoen-icon" />
-                    <h2>Running</h2>
-                    <p>Started running with the first corona lockdown and just kept it up. It helps clear my mind and
-                        the exercise makes you feel better.</p>
-                </div>
-                <div class="item">
-                    <h2>Music</h2>
-                    <p>I think everyone likes good music and I am no exception. I like all kinds of genres but listen to
-                        hip-hop and rap most often. I also really enjoy classical music and lofi.</p>
-                </div>
-                <div class="item">
-                    <h2>Gaming</h2>
-                    <p>I occasionally enjoy playing games. I play on the nintendo switch and the playstation 4. My all
-                        time favorite games are read dead redemption 2, breath of the wild and Minecraft.</p>
-                </div>
-                <div class="item">
-                    <h2>Films & Series</h2>
-                    <p>Again, I think everyone watches films or series. Some of my favorites are: Spiderman Into the
-                        Verse, Game of Thrones, One Punch Man and Brooklyn 99.</p>
-                </div>
+        <div class="hobbies">
 
+            <div class="item">
+                <img src="images/potloodd-icon.png" class="potloodd" alt="potloodd-icon" />
+                <h2 id="Hobbies">Drawing</h2>
+                <p>Have been drawing since i was little. Attended art school for 4 years. Decided I didn't want to
+                    pursue it professionally and kept it as a hobby.</p>
+            </div>
+            <div class=" item">
+                <img src="images/boek-ai.png" class="boek" alt="boek-ai" />
+                <h2>Reading</h2>
+                <p>Have also been reading since I was a kid. It is a nice form of relaxation and break from the
+                    digital world.</p>
+            </div>
+            <div class="item">
+                <img src="images/schoen-icon.png" class="schoen" alt="schoen-icon" />
+                <h2>Running</h2>
+                <p>Started running with the first corona lockdown and just kept it up. It helps clear my mind and
+                    the exercise makes you feel better.</p>
+            </div>
+            <div class="item">
+                <img src="images/schoen-icon.png" class="schoen" alt="schoen-icon" />
+                <h2>Music</h2>
+                <p>I think everyone likes good music and I am no exception. I like all kinds of genres but listen to
+                    hip-hop and rap most often. I also really enjoy classical music and lofi.</p>
+            </div>
+            <div class="item">
+                <img src="images/schoen-icon.png" class="schoen" alt="schoen-icon" />
+                <h2>Gaming</h2>
+                <p>I occasionally enjoy playing games. I play on the nintendo switch and the playstation 4. My all
+                    time favorite games are read dead redemption 2, breath of the wild and Minecraft.</p>
+            </div>
+            <div class="item">
+                <img src="images/schoen-icon.png" class="schoen" alt="schoen-icon" />
+                <h2>Films & Series</h2>
+                <p>Again, I think everyone watches films or series. Some of my favorites are: Spiderman Into the
+                    Verse, Game of Thrones, One Punch Man and Brooklyn 99.</p>
             </div>
 
-        </section>
+        </div>
 
     </div>
     <!--close outer wrapper-->
 
     <div class="social-media">
 
-        <h2>Contact Info</h2>
+        <h2 id="Contact">Contact Info</h2>
         <p>mail</p>
         <p>phone number</p>
         <p>instagram</p>
