@@ -1,11 +1,8 @@
-const menuBtn = document.querySelector('.menu-btn');
-let menuOpen = false;
-menuBtn.addEventListener('click', () => {
-    if (!menuOpen) {
-        menuBtn.classList.add('open');
-        menuOpen = true;
+function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+        x.style.display = "none";
     } else {
-        menuBtn.classList.remove('open');
-        menuOpen = false;
+        x.style.display = "block";
     }
-});
+}
