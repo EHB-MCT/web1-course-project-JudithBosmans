@@ -5,6 +5,12 @@ body {
     margin: 0;
 }
 
+.topnav a {
+    padding-left: 500px;
+    padding-top: 500px;
+}
+
+
 header {
     font-size: 40px;
     height: 600px;
@@ -17,11 +23,6 @@ header h1 {
     font-family: 'Bebas Neue', cursive;
 }
 
-.topnav a {
-    padding-left: 500px;
-    padding-top: 500px;
-}
-
 header h2 {
     padding-left: 150px;
     font-size: 80px;
@@ -30,29 +31,31 @@ header h2 {
 }
 
 .introduction {
-    text-align: left;
-    padding: 100px;
-    display: inline-block;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 450px;
+    padding-bottom: 150px;
+    background-color: #FFFAF1;
 }
 
 .introduction p {
-    padding-left: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 700px;
+    padding-top: 260px;
 }
 
 .introduction h2 {
-    padding-left: 350px;
+    padding-top: 150px;
     font-size: 50px;
 }
 
-
-.social-media {
-    text-align: center;
-}
-
 .portret {
-    padding-right: 800px;
-    padding-top: 10px;
-    width: 300px;
+    margin-left: 250px;
+    margin-right: 50px;
+    margin-top: 100px;
 }
 
 h1,
@@ -90,34 +93,29 @@ p {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    background-color: #FFFAF1;
 }
 
 .hobbies div {
-    width: 30%;
-    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .item {
     justify-content: space-around;
-    width: 500px;
-}
-
-.potloodd,
-.boek,
-.schoen {
-    width: 100px;
-    height: auto;
-    padding-top: 50px;
-}
-
-section {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    width: 33%px;
 }
 
 .hobbies p {
     color: black;
     font-family: 'Roboto', sans-serif;
+}
+
+
+.contact {
+    background-color: #FFFAF1;
+    text-align: center;
 }
 
 /* hamburger menu */
@@ -134,12 +132,11 @@ body {
     color: blanchedalmond;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 30px;
     display: block;
 }
 
 .topnav a.icon {
-    background: black;
     display: block;
     position: absolute;
     right: 20px;
