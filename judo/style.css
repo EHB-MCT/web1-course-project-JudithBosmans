@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+.topnav a {
+    padding-left: 500px;
+    padding-top: 500px;
+}
+
+
+header {
+    font-size: 40px;
+    height: 700px;
+}
+
+header h1 {
+    padding-top: 150px;
+    padding-left: 150px;
+    color: #e65100;
+    font-family: 'Bebas Neue', cursive;
+}
+
+header h2 {
+    padding-left: 150px;
+    font-size: 80px;
+    color: #e65100;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.introduction {
+    width: 100%;
+    display: flex;
+    background-color: #f3e7d3;
+    align-items: center;
+    justify-content: end;
+}
+
+.introduction p {
+    width: 50%;
+}
+
+.introduction h2 {
+    padding-top: 95px;
+    font-size: 50px;
+}
+
+.portret {
+    width: 15%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;
+    color: #e65100;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+.wrapper p {
+    color: blanchedalmond;
+    padding-left: 150px;
+    font-size: 30px;
+}
+
+.wrapper {
+    background-image: url("images/pawel-czerwinski-XWzKALda8kE-unsplash.jpg");
+    background-position: top center;
+    background-position: auto;
+    background-repeat: no-repeat;
+}
+
+.hobbies {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #f3e7d3;
+    text-align: center;
+    margin: 0;
+}
+
+.item {
+    width: 30%;
+}
+
+.hobbies p {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contact {
+    background-color: #f3e7d3;
+    text-align: center;
+    height: 300px;
+}
+
+.contact p {
+    margin-top: 60px;
+
+}
+
+/* hamburger menu */
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.topnav #myLinks {
+    display: none;
+}
+
+.topnav a {
+    color: blanchedalmond;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+    display: block;
+}
+
+.topnav a.icon {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.topnav a:hover {
+    color: blanchedalmond;
+}
+
+.hobbies img {
+    width: 100%;
+}
+
+.blub {
+    display: flex;
+}
+
+.blub img {
+    width: 15%;
+}
+
+.blub div {
+    display: flex;
+    flex-direction: inherit;
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+}
+
+.blub aside {
+    width: 16%;
+    padding: 1%;
+}
+
+
+@media (max-width: 480px) {}
