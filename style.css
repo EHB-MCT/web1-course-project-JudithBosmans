@@ -17,7 +17,7 @@ body {
 
 header {
     font-size: 70px;
-    height: 915px;
+    height: 940px;
 }
 
 header h1 {
@@ -34,8 +34,7 @@ header h2 {
     font-family: 'Bebas Neue', cursive;
 }
 
-/* who am / i  */
-
+/*INTRODUCTION*/
 .blub {
     display: flex;
 }
@@ -44,14 +43,18 @@ header h2 {
     width: 15%;
 }
 
+.blub h2 {
+    font-size: 30px;
+}
+
 .blub div {
     display: flex;
     flex-direction: inherit;
     align-items: center;
     justify-content: center;
     margin: 25px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 
 }
 
@@ -62,29 +65,6 @@ header h2 {
 
 .blub {
     background-color: #f3e7d3;
-}
-
-/* who am i / close */
-
-.introduction {
-    width: 100%;
-    display: flex;
-    background-color: #f3e7d3;
-    align-items: center;
-    justify-content: end;
-}
-
-.introduction p {
-    width: 50%;
-}
-
-.introduction h2 {
-    padding-top: 95px;
-    font-size: 50px;
-}
-
-.portret {
-    width: 15%;
 }
 
 h1,
@@ -126,6 +106,29 @@ p {
 
 .item {
     width: 30%;
+    padding-top: 50px;
+}
+
+/* HOVER */
+.reading:hover {
+    color: black;
+    opacity: 50%;
+}
+
+.running:hover {
+    color: black;
+    opacity: 50%;
+}
+
+.music:hover {
+    color: black;
+    opacity: 50%;
+}
+
+/* HOVER CLOSE */
+
+.hobbies img {
+    width: 100%;
 }
 
 .hobbies p {
@@ -133,15 +136,56 @@ p {
     font-family: 'Roboto', sans-serif;
 }
 
+.hobbies h2 {
+    padding-top: 20px;
+    font-size: 30px;
+}
+
+.bottom {
+    padding-bottom: 60px;
+}
+
 .contact {
-    background-color: #f3e7d3;
+    background-color: #e65100;
     text-align: center;
-    height: 300px;
+    height: 500px;
+    padding-top: 55px;
+}
+
+#contact {
+    color: #f3e7d3;
+}
+
+.contact h2 {
+    padding-top: 70px;
+    padding-bottom: 20px;
+    font-size: 50px;
+}
+
+.contact h4 {
+    color: #f3e7d3;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25px;
+}
+
+.contact h4:hover {
+    color: #b33d18;
+}
+
+.contact a {
+    text-decoration: none;
 }
 
 .contact p {
-    margin-top: 60px;
+    color: blanchedalmond;
+}
 
+.blubbie {
+    padding-top: 20px;
+}
+
+p.solid {
+    border-style: solid;
 }
 
 /* hamburger menu */
@@ -173,10 +217,101 @@ body {
     color: blanchedalmond;
 }
 
-.hobbies img {
-    width: 100%;
+@media (max-width: 768px) {
+
+    /* INTRODUCTION OPEN*/
+
+    .blub img {
+        width: 40%;
+        margin-left: -60px;
+    }
+
+    .blub h2 {
+        font-size: 50px;
+        width: 170px;
+        padding-top: 30px;
+    }
+
+    .blub2 {
+        width: 220px;
+    }
+
+    /* INTRODUCTION CLOSE*/
+
+    /* HOBBIES FOTO OPEN*/
+
+    .item {
+        width: 40%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* HOBBIES FOTO CLOSE*/
+
+    .contact h4:hover {
+        color: #b33d18;
+    }
+
 }
 
+@media (max-width: 480px) {
 
+    /* HEADER OPEN */
 
-@media (max-width: 480px) {}
+    header h1 {
+        font-size: 100px;
+        padding-top: 150px;
+        padding-left: 50px;
+    }
+
+    header h2 {
+        padding-left: 50px;
+        font-size: 90px;
+    }
+
+    header p {
+        margin-left: -100px;
+        margin-top: -10px;
+    }
+
+    /* HEADER ClOSE */
+
+    /* INTRODUCTION OPEN */
+
+    .blub img {
+        width: 50%;
+    }
+
+    .blub h2 {
+        font-size: 30px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .blub div {
+        flex-direction: column;
+    }
+
+    .blub img {
+        width: 50%;
+    }
+
+    .blub aside {
+        width: 50%;
+        text-align: center;
+    }
+
+    /* INTRODUCTION CLOSE */
+
+    .hobbies {
+        flex-direction: column;
+    }
+
+    .item {
+        width: 100%;
+    }
+
+    .contact h4:hover {
+        color: #b33d18;
+    }
+}
